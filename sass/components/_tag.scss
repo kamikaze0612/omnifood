@@ -1,0 +1,49 @@
+.tag {
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  display: inline;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 150px;
+  margin: 0.5rem;
+  hyphens: none;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @include respond(mid-laptop) {
+    font: 1rem;
+    padding: 0.6rem;
+    margin: 3px;
+  }
+
+  &--paleo {
+    background-color: var(--color-paleo);
+  }
+  &--vegetarian {
+    background-color: var(--color-vegetarian);
+  }
+  &--gluten-free {
+    background-color: var(--color-gluten-free);
+  }
+  &--lactose-free {
+    background-color: var(--color-lactose-free);
+  }
+  &--keto {
+    background-color: var(--color-keto);
+  }
+  &--pescatarian {
+    background-color: var(--color-pescatarian);
+  }
+  &--vegan {
+    background-color: var(--color-vegan);
+  }
+  &--low-fodmap {
+    background-color: var(--color-low-fodmap);
+  }
+  &--kid-friendly {
+    background-color: var(--color-kid-friendly);
+  }
+}

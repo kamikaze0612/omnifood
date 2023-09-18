@@ -1,0 +1,209 @@
+.section-hero {
+  background-image: linear-gradient(
+    to bottom,
+    #fff,
+    var(--color-primary-light)
+  );
+  margin-top: 6.4rem;
+  padding: 6.4rem;
+
+  @include respond(tablet) {
+    margin-top: 0;
+  }
+
+  @include respond(sm-tablet) {
+    padding: 6.4rem;
+  }
+
+  @include respond(phone) {
+    padding: 4.8rem;
+  }
+
+  & .container {
+    display: flex;
+    gap: 6.4rem;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tablet) {
+      flex-direction: column;
+      width: 100%;
+      gap: 3.2rem;
+      padding: 0 6.4rem;
+    }
+
+    @include respond(sm-tablet) {
+      padding: 0;
+    }
+  }
+}
+
+.section-featured {
+  padding: 4.8rem 0;
+
+  & .container {
+    padding-bottom: 4.8rem;
+    border-bottom: 2px solid var(--color-grey-light--3);
+
+    @include respond(large-laptop) {
+      padding: 0 3.2rem 4.8rem 3.2rem;
+    }
+
+    @include respond(phone) {
+      padding: 0 2.4rem 4.8rem 2.4rem;
+    }
+  }
+}
+
+.section-how {
+  padding-top: 3.2rem;
+
+  @include respond(tablet) {
+    padding: 0 3.2rem;
+  }
+
+  & .heading--primary {
+    max-width: 54rem;
+    text-align: center;
+    margin: 0 auto;
+
+    @include respond(mid-laptop) {
+      max-width: 48rem;
+    }
+  }
+}
+
+.section-meals {
+  margin-top: 6.4rem;
+  padding: 4.8rem 2.4rem;
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-primary-light),
+    #fff
+  );
+
+  & .heading--primary {
+    max-width: 56rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  & .meals__cards-box {
+    max-width: 148rem;
+    margin: 0 auto;
+    margin-top: 4.8rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2.4rem;
+
+    @include respond(laptop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 3.2rem;
+      row-gap: 4.8rem;
+    }
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  & .tags__heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 6.4rem;
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
+  }
+
+  & .meals__tags-box {
+    max-width: 52rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2.4rem;
+    line-height: 3.5;
+  }
+}
+
+.section-testimonials {
+  margin: 0 auto;
+  display: flex;
+  max-width: 156rem;
+  gap: 3.2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 4.8rem 2.4rem;
+
+  @include respond(laptop) {
+    flex-direction: column;
+  }
+
+  & .testimonials {
+    @include respond(laptop) {
+      order: 1;
+      max-width: 80rem;
+    }
+  }
+
+  & .heading--primary,
+  & .heading--secondary {
+    text-align: left;
+
+    @include respond(laptop) {
+      text-align: center;
+    }
+  }
+
+  & .heading--primary {
+    @include respond(sm-tablet) {
+      max-width: 40rem;
+      margin: 0 auto 2.4rem auto;
+    }
+  }
+}
+
+.section-pricing {
+  padding: 4.8rem 2.4rem;
+  & .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & .heading--primary {
+    max-width: 40rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.section-features {
+  padding: 3.2rem 0;
+  background-color: var(--color-primary-light--1);
+  box-shadow: 0 0 4rem rgba(0, 0, 0, 0.1);
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3.2rem;
+
+    @include respond(sm-tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      row-gap: 3.2rem;
+    }
+  }
+}
+
+.section-cta {
+  padding: 9.6rem 2.4rem;
+
+  @include respond(phone) {
+    padding: 6.4rem 2.4rem;
+  }
+}

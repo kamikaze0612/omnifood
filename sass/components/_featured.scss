@@ -1,0 +1,44 @@
+.featured {
+  display: flex;
+  gap: 4.8rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3.2rem;
+
+  @include respond(tablet) {
+    gap: 2.4rem;
+  }
+
+  @include respond(sm-tablet) {
+    gap: 1.6rem;
+  }
+
+  @include respond(phone) {
+    gap: 0.6rem;
+  }
+
+  &__heading {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-grey-dark--2);
+  }
+
+  &__logo {
+    height: 3rem;
+    width: auto;
+    filter: brightness(0);
+
+    @include respond(tablet) {
+      height: 2rem;
+    }
+
+    @include respond(sm-tablet) {
+      height: 1.6rem;
+    }
+
+    @include respond(phone) {
+      height: 1.2rem;
+    }
+  }
+}

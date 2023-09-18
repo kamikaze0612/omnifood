@@ -1,0 +1,30 @@
+.container {
+  max-width: 136rem;
+  margin: 0 auto;
+}
+
+.mg-bottom-sm {
+  margin-bottom: 1.2rem;
+}
+
+.mg-bottom-md {
+  margin-bottom: 1.6rem;
+}
+
+.mg-bottom-lg {
+  margin-bottom: 2.4rem;
+}
+
+.mg-bottom-hg {
+  margin-bottom: 3.2rem;
+}
+
+.text--bold {
+  font-weight: 700;
+  color: var(--color-grey-dark--1);
+}
+
+.text--orange {
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}

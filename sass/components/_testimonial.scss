@@ -1,0 +1,133 @@
+.testimonial {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--color-primary-light--1);
+  padding: 3.2rem 2.4rem;
+  border-radius: 1.6rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+
+  &:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+
+  &__img-box {
+    margin-right: 3.2rem;
+    position: relative;
+    transition: all 0.5s;
+    overflow: hidden;
+    border-radius: 50%;
+    flex: 0 0 15rem;
+
+    @include respond(laptop) {
+      overflow: visible;
+    }
+
+    @include respond(sm-tablet) {
+      flex: 0 0 10rem;
+    }
+
+    @include respond(phone) {
+      flex: 0 0 8rem;
+    }
+  }
+
+  &__img-box:hover &__img {
+    filter: blur(3px);
+    transform: scale(1.2);
+  }
+
+  &__user {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    gap: 0.6rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+
+    @include respond(laptop) {
+      top: 90%;
+      opacity: 1;
+      color: var(--color-primary-dark--1);
+      flex-direction: row;
+      align-items: flex-end;
+      left: 40rem;
+
+      &::before {
+        content: '-';
+        font-size: 1.6rem;
+      }
+
+      @include respond(sm-tablet) {
+        top: 100%;
+      }
+
+      @include respond(phone) {
+        left: 20rem;
+      }
+    }
+  }
+
+  &__img-box:hover &__user {
+    opacity: 1;
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--color-primary-light--1);
+    line-height: 1.4;
+    font-weight: 700;
+  }
+
+  &__location {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  &__name,
+  &__location {
+    @include respond(laptop) {
+      color: var(--color-primary-dark--1);
+      display: block;
+      white-space: nowrap;
+      line-height: 1;
+      font-size: 1.6rem;
+    }
+
+    @include respond(sm-tablet) {
+      font-size: 1.4rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    transition: all 0.5s;
+    @include respond(laptop) {
+      border-radius: 50%;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    line-height: 1.5;
+
+    @include respond(sm-tablet) {
+      font-size: 1.6rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+      line-height: 1.3;
+    }
+  }
+}

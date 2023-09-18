@@ -1,0 +1,25 @@
+@import './utils/mixins';
+@import './utils/variables';
+@import './utils/helpers';
+
+@import './base/_base';
+@import './base/typography';
+@import './base/animations';
+
+@import './components/button';
+@import './components/featured';
+@import './components/features';
+@import './components/cta';
+@import './components/how';
+@import './components/testimonial';
+@import './components/pricing';
+@import './components/card';
+@import './components/gallery';
+@import './components/tag';
+@import './components/people';
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/footer';
+
+@import './pages/home';

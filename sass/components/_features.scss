@@ -1,0 +1,51 @@
+.feature {
+  text-align: center;
+  flex: 0 0 20rem;
+
+  @include respond(tablet) {
+    flex: 0 0 18rem;
+  }
+
+  @include respond(sm-tablet) {
+    width: 20rem;
+  }
+
+  @include respond(phone) {
+    width: 14rem;
+  }
+
+  &__icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    background-color: var(--color-primary-light);
+    display: inline-block;
+    border-radius: 50%;
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: var(--color-primary-dark);
+  }
+
+  &__details {
+    margin-top: 2.4rem;
+  }
+
+  &__title {
+    font-size: 1.4rem;
+  }
+
+  &__text {
+    margin-top: 1.4rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: var(--color-grey-dark--4);
+
+    @include respond(phone) {
+      font-size: 1.2rem;
+    }
+  }
+}

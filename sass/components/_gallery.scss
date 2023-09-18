@@ -1,0 +1,39 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+
+  @include respond(laptop) {
+    grid-template-columns: repeat(4, 1fr);
+    order: 2;
+  }
+
+  @include respond(sm-tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 4.8rem;
+  }
+
+  @include respond(phone) {
+    padding: 0 1.6rem;
+  }
+
+  &__img-box {
+    overflow: hidden;
+    width: 20rem;
+
+    @include respond(phone) {
+      max-width: 14rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    transition: all 0.4s;
+    filter: contrast(0.7);
+
+    &:hover {
+      transform: scale(1.15);
+      filter: contrast(1);
+    }
+  }
+}
