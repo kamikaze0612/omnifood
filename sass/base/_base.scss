@@ -10,3 +10,7 @@ body {
   overscroll-behavior-y: none;
   position: relative;
 }
+
+.omnifood-content > * {
+  scroll-margin: 96px;
+}
