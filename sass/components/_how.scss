@@ -91,6 +91,14 @@
     width: 75%;
     display: block;
     margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30%);
+    transition: all 0.4s ease-out;
+
+    &.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     @include respond(tablet) {
       width: 100%;

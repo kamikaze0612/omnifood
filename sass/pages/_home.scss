@@ -39,7 +39,7 @@
 }
 
 .section-featured {
-  padding: 4.8rem 0;
+  padding-top: 4.8rem;
 
   & .container {
     padding-bottom: 4.8rem;
@@ -56,7 +56,7 @@
 }
 
 .section-how {
-  padding-top: 3.2rem;
+  padding-top: 9.6rem;
 
   @include respond(tablet) {
     padding: 0 3.2rem;
@@ -74,8 +74,9 @@
 }
 
 .section-meals {
-  margin-top: 6.4rem;
   padding: 4.8rem 2.4rem;
+  padding-top: 9.6rem;
+  padding-bottom: 0;
   background-image: linear-gradient(
     to bottom,
     var(--color-primary-light),
@@ -138,6 +139,8 @@
   align-items: center;
   justify-content: center;
   padding: 4.8rem 2.4rem;
+  padding-top: 11.2rem;
+  padding-bottom: 0;
 
   @include respond(laptop) {
     flex-direction: column;
@@ -169,6 +172,7 @@
 
 .section-pricing {
   padding: 4.8rem 2.4rem;
+  padding-top: 11.2rem;
   & .container {
     display: flex;
     flex-direction: column;

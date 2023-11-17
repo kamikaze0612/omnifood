@@ -2,7 +2,9 @@ const headerNav = document.querySelector(".header__navigation");
 const headerMenuBtn = document.querySelector(".header__menu-btn");
 const allLinks = document.querySelectorAll("a:link");
 const heroSectionEl = document.querySelector(".section-hero");
+const featuredSectionEl = document.querySelector(".section-featured");
 const body = document.body;
+const appImages = document.querySelectorAll("img.how__img");
 
 headerMenuBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -40,7 +42,6 @@ allLinks.forEach((link) => {
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    console.log(ent);
     ("");
 
     if (!ent.isIntersecting) {
@@ -52,11 +53,37 @@ const obs = new IntersectionObserver(
     }
   },
   {
-    root: null,
     threshold: 0,
     rootMargin: "-96px",
   }
 );
 
-console.log(heroSectionEl);
+const featuredObserver = new IntersectionObserver(
+  (entries) => {
+    const entry = entries[0];
+    entry.target
+      .querySelector(".featured")
+      .classList.toggle("show", entry.isIntersecting);
+  },
+  {
+    threshold: 0.7,
+  }
+);
+
+const appImgObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+    });
+  },
+  {
+    threshold: 0,
+    rootMargin: "90px",
+  }
+);
+
+featuredObserver.observe(featuredSectionEl);
 obs.observe(heroSectionEl);
+appImages.forEach((image) => {
+  appImgObserver.observe(image);
+});
